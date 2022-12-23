@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="CTF平台，CTF比赛，CTFer">
+	<meta name="description" content="IDLab-CTFer登录">
+	<title>IDLab-CTFer登录</title>
+	<link  href="static/css/portal_style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="static/js/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="aui-flexView clearfix">
+	<div class="portal-title">
+		<h1>IDLab-CTF</h1>
+	</div>
+	<div class="aui-login-bg">
+		<!-- <img src="static/images/body-bg.png" alt=""> -->
+	</div>
+	<div class="aui-login-box">
+		<h2 class="aui-login-title">登录</h2>
+		<form action="" class="aui-login-form">
+			<p>
+				<i class="icon icon-user"></i>
+				<input type="text" placeholder="用户名" name="name">
+			</p>
+			<p>
+				<i class="icon icon-pass"></i>
+				<input type="password" placeholder="密码" name="password">
+			</p>
+			<p style="width:70%">
+				<i class="icon icon-code"></i>
+				<input type="text" placeholder="图形验证码" name="captcha">
+			</p>
+			<a href="javascript:getCode();" class="aui-code">
+				<!-- 验证码 -->
+				<img src="http://ctf.ahcssec.com.cn/ajax.php?m=getCaptcha" alt="" id="aui-code-img">
+			</a>
+			<button type="button" class="aui-button-go">登录</button>
+			<span>&nbsp;</span>
+		</form>
+	</div>
+	<script>
+		function login(){
+			let username = $("input[name='name']").prop("value");
+			let password = $("input[name='password']").prop("value");
+			let captcha = $("input[name='captcha']").prop("value");
+			if (!username || !password || !captcha){
+				alert("不能为空");
+			}
+			 var info = new FormData();
+			info.append("password", username);
+			info.append("username", password);
+			info.append("captcha", captcha);
+			info.append("token", "a");
+			 $.ajax({
+			            type: "POST",
+			            url: "ajax.php?m=login",
+			            data: info,
+			            dataType: "json",
+			            processData: false,
+			            contentType: false,
+			            success: function(data) {
+			                debugLog(data);
+			                if (errorCheck(data)) {
+			                    getCaptcha();
+			                    return false
+			                }
+			                loadSession();
+			                loadAccount();
+			                Materialize.toast(data[0][1], 4000, "rounded")
+			            },
+			            error: function(data) {
+			                debugLog(data)
+			            }
+			        });
+		}
+		function getCode(){
+			document.getElementById("aui-code-img").src='http://ctf.ahcssec.com.cn/ajax.php?m=getCaptcha';
+		}
+		$(function(){
+			$(".aui-button-go").on("click",login);
+		});
+	</script>
+</div>
+</body>
+</html>

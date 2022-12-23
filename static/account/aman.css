@@ -1,0 +1,98 @@
+
+.body-login{
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	overflow: hidden;
+}
+
+
+.aman-login{
+	position: absolute;
+	width: 600px;
+	height: 510px;
+	left:46.5%;
+	background: url(./login-bg.png)center center no-repeat;
+	background-size: 100% 100%;
+	top:450px;
+	margin-top: -350px;
+	margin-left: -235px;
+	
+}
+.aman-login .aman-login-content{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-align: left;
+	padding-top: 100px;
+}
+.aman-login .aman-login-content h2{
+	position: absolute;
+	top:0px;
+	margin: 0;
+	left:0;
+	right: 0;
+	text-align: center;
+	font-size: 25px;
+	height: 50px;
+	line-height: 50px;
+	color: rgba(0,255,255,1);
+	margin-bottom: 50px;
+}
+.aman-login .aman-login-content input{
+	width: 50%;
+	font-size: 15px;
+	margin:0 150px 0 150px;
+	margin-top: 30px;
+	height: 50px;
+	background: rgba(0,0,0,.4);
+	border:1px solid rgba(0,255,255,0.4);
+	padding: 0 10px;
+	color: #0ff;
+	outline: none;
+}
+
+.aman-login .aman-login-content button{
+	width: 130px;
+	margin-top: 30px;
+	height: 42px;
+	background: url(./login-btn.png)center center no-repeat;
+	background-size: 100% 100%;
+	border:none;
+	padding: 0 10px;
+	color: #0ff;
+	outline: none;
+}
+
+.aman-login .aman-login-content .times{
+	position: absolute;
+	display: block;
+	right:-5px;
+	top:34px;
+	height: 45px;
+	width: 80px;
+	background: url(./login-btn-close.png);
+	background-size: 100% 100%;
+	
+}
+.aman-login .aman-login-content .times:hover{
+	background: url(./login-btn-close2.png);
+	background-size: 100% 100%;
+}
+.aman-login .aman-login-content button:hover{
+	background: url(./login-btn2.png)center center no-repeat;
+	background-size: 100% 100%;
+}
+.aman-login .aman-login-content input:hover{
+	border:1px solid rgba(0,255,255,0.8);
+}
+
+.aman-login .aman-login-content input::-webkit-input-placeholder {
+    color: rgba(0,255,255,0.4);
+}
+.aman-login .aman-login-content input:-moz-placeholder {
+    color: rgba(0,255,255,0.4);
+}
+.aman-login .aman-login-content input:-ms-input-placeholder {
+    color: rgba(0,255,255,0.4);
+}

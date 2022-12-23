@@ -1,0 +1,189 @@
+<!DOCTYPE php>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/php; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>IDLab-CTF</title>
+	<!-- materialize -->  
+	<link href="static/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!-- Orbitron Font -->
+    <link href="static/css/03201248d902413a8c1ac91c2728eecd.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="static/css/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="static/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Font Linea -->
+    <link href="static/css/linea-arrows.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="static/css/linea-basic.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="static/css/linea-ecommerce.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="static/css/linea-software.min.css" media="screen" rel="stylesheet" type="text/css">
+
+	<!-- Custom styles -->
+    <link href="static/css/yellow.min.css" media="screen" rel="stylesheet" type="text/css" title="yellow">
+     <!-- Modernizr 
+    <script type="text/javascript" src="static/js/modernizr-custom.min.js"></script>
+	-->
+	<link href="static/notice/css/style.css" type="text/css" rel="stylesheet" />
+	<link href="static/css/style.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="static/notice/css/normalize.min.css">
+	<!-- jQuery -->
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    
+	<script type="text/javascript" src="static/js/idlabctf.js"></script>
+	
+</head>
+<body class="skrollr" data-skrollr="true">
+    <div class="loader-overlay">
+        <div class="loader">
+            <div class="loader-icon">
+                <span class="icon icon-arrows-glide"></span>
+            </div>
+            <h3 class="loader-text">Loading</h3>
+        </div>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top" id="navbar-main">
+        <div class="navbar-inner clearfix">
+            <div class="container">
+                <div class="navbar-header">
+                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand home">
+						
+                        <span class="page-title title">IDLab-CTF</span>
+						
+                        <span class="icon icon-arrows-glide"></span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">              	
+                    <ul class="nav navbar-nav nav-left">
+                         
+                        <li id="index">
+                            <a href="index.html">
+                                <span class="main-link"><i class="fa fa-home"></i> 首页</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li id="notices">
+                            <a href="notices.html">
+                                <span class="main-link"><i class="fa fa-volume-up" aria-hidden="true"></i>  公告</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li id="challenges">
+                            <a href="challenges.html">
+                                <span class="main-link"><i class="fa fa-diamond" aria-hidden="true"></i>  挑战</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+						<li id="scoreboard">
+                            <a href="scoreboard.html">
+                                <span class="main-link"><i class="fa fa-line-chart" aria-hidden="true"></i> 排行</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li id="wpsubmit">
+                            <a href="wp.html">
+                                <span class="main-link"><i class="fa fa-file-text" aria-hidden="true"></i> WP管理</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+						
+                    </ul>
+                    <ul class="nav navbar-nav nav-right">
+						<li class="nav-item">
+						<a>
+						<span class="header center" id="headline"><i class="fa fa-bullhorn" aria-hidden="true"></i></span></a>
+						</li>
+						<li class="nav-item">
+						<a>
+						<span class="countdown">
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
+								<span class="days">88 天</span>
+								<span>-</span>
+								<span class="hours">88</span>
+								<span class="minutes">88 </span>
+								<span class="seconds">88</span>
+						</span></a>
+						</li>
+                	    <li id="tools">
+                            <a href="tools.html">
+                                <span class="main-link">
+								<i class="fa fa-send" aria-hidden="true"></i> 工具</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li id="account">
+                            <a href="account.html">
+                                <span class="main-link"><i class="fa fa-user-o" aria-hidden="true"></i> 用户</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="animation-wrapper">
+  <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+  </div>
+<link rel=stylesheet href="static/home/css/style.css">
+<div class="section section-standard" style="width:100%;height:100%;">
+        <div class="section-inner">
+	<div class=wrap id=wrap>
+		<div class=wrapper>
+			<div class="page_wp" id="page_wp">
+				<div class="page page_1 show"><span class="page_bg scale_box"></span>
+					<div class="img_box"><img src="" alt=""></div>
+					<div class="txt_box scale_box">
+						<h2>IDLab-CTF</h2>
+						<center><p class="txt_brief">本平台纯属公益行为，主要是为了广大的ctf爱好者相互学习交流。</p></center>
+						<center><p class="txt_brief">如有侵权或者题目问题及平台bug请联系：<font  color="green">idlab@ahcssec.com.cn</font></p></center>
+			</div>
+			<div class="star_wp scale_box" id=star_wp>
+				<span class=star_bg></span> 
+				<span class=star_box></span>
+			</div>
+			<canvas id=canvas></canvas>
+			<div class="btns_wp scale_box">
+				<center>
+				<a class="btn_download" href="/account.html">登录</a>
+				<a class="btn_download" href="/register.html">注册</a>
+				</center>
+			</div>
+	</div>
+                <div>
+<!--			<div class="btn_control" id="btn_control">-->
+<!--				<a href=javascript:; class=cur></a>-->
+<!--				<a href=javascript:;></a>-->
+<!--				<a href=javascript:; ></a>-->
+<!--				<a href=javascript:;></a>-->
+<!--			</div>-->
+		</div>
+        </div>
+  </div>
+  
+	<!-- </footer> -->
+    <div id="to-top" class="to-top">
+        <a href="#" class="To the top" title="To the top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+	<!-- Index -->  
+	<script src="static/index/index.js"></script>
+	<script src="static/home/js/vendors.js"></script>
+	<script src="static/home/js/index.js"></script>
+    <!-- Custom javascript -->
+    <script type="text/javascript" src="static/js/custom.min.js"></script>
+
+    <!-- Main javascript -->
+    <script type="text/javascript" src="static/js/main.min.js"></script>
+</body>
+</html>
